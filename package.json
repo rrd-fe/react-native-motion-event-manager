@@ -1,0 +1,23 @@
+{
+  "name": "react-native-motion-event-manager",
+  "version": "0.0.1",
+  "description": "Extract Device Motion event to React Native, with Animated.event supported.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "Animated.event",
+    "CMMotionManager",
+    "MotionManager",
+    "Accelerometer",
+    "Gyroscope",
+    "Magnetometer",
+    "yaw",
+    "pitch",
+    "roll"
+  ],
+  "author": "Michael Bai",
+  "license": "ISC"
+}
