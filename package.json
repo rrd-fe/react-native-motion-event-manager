@@ -19,5 +19,6 @@
     "roll"
   ],
   "author": "Michael Bai",
-  "license": "ISC"
+  "license": "ISC",
+  "homepage": "https://github.com/rrd-fe/react-native-motion-event-manager"
 }
