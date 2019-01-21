@@ -1,5 +1,5 @@
 
-#import "DeviceMotionView.h"
+#import "RNDeviceMotionModule.h"
 #import <CoreMotion/CoreMotion.h>
 
 #import "RCTEventDispatcher.h"
@@ -108,16 +108,19 @@ RCT_NOT_IMPLEMENTED(- (instancetype)init)
 static CMMotionManager *mManager;
 static BOOL isRunning;
 
-@interface DeviceMotionView ()
+@interface RNDeviceMotionModule ()
 {
-    RCTEventDispatcher *_eventDispatcher;
     uint16_t _coalescingKey;
     NSString *_lastEmittedEventName;
 }
 
 @end
 
-@implementation DeviceMotionView
+@implementation RNDeviceMotionModule
+
+@synthesize bridge = _bridge;
+
+RCT_EXPORT_MODULE();
 
 + (CMMotionManager *)sharedManager
 {
@@ -127,51 +130,37 @@ static BOOL isRunning;
     return mManager;
 }
 
-- (instancetype)initWithEventDispatcher:(RCTEventDispatcher *)eventDispatcher
-{
-    RCTAssertParam(eventDispatcher);
-    
-    if ((self = [super initWithFrame:CGRectZero])) {
-        _eventDispatcher = eventDispatcher;
-    }
-    return self;
-}
-
-RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
-RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
-
-- (void)startDeviceMotionUpdate {
+RCT_EXPORT_METHOD(startDeviceMotionUpdates:(nonnull NSNumber *)viewTag eventName:(nonnull NSString *)eventName) {
     if (isRunning) {
-        RCTLogError(@"There should be ONLY ONE DeviceMotionView!");
+        RCTLogError(@"DeviceMotion has started already!");
         return;
     }
-    if ([DeviceMotionView sharedManager].isDeviceMotionAvailable) {
+    if ([RNDeviceMotionModule sharedManager].isDeviceMotionAvailable) {
         isRunning = YES;
-        [DeviceMotionView sharedManager].deviceMotionUpdateInterval = 1.0 / 60.0;
-        [[DeviceMotionView sharedManager] startDeviceMotionUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMDeviceMotion * _Nullable motion, NSError * _Nullable error) {
+        [RNDeviceMotionModule sharedManager].deviceMotionUpdateInterval = 1.0 / 60.0;
+        [[RNDeviceMotionModule sharedManager] startDeviceMotionUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMDeviceMotion * _Nullable motion, NSError * _Nullable error) {
             if (motion) {
-                NSString *eventName = NSStringFromSelector(@selector(onDeviceMotionChange));
-                [self sendMotionEventWithName:eventName motion:motion];
+                [self sendMotionEventWithName:eventName viewTag:viewTag motion:motion];
             }
         }];
     }
 }
 
+RCT_EXPORT_METHOD(stopDeviceMotionUpdates) {
+    [[RNDeviceMotionModule sharedManager] stopDeviceMotionUpdates];
+    isRunning = NO;
+}
+
 - (void)sendMotionEventWithName:(NSString *)eventName
+                        viewTag:(NSNumber *)viewTag
                          motion:(CMDeviceMotion *)motion
 {
     if (![_lastEmittedEventName isEqualToString:eventName]) {
         _coalescingKey++;
         _lastEmittedEventName = [eventName copy];
     }
-    RCTMotionEvent *scrollEvent = [[RCTMotionEvent alloc] initWithEventName:eventName reactTag:self.reactTag motion:motion coalescingKey:_coalescingKey];
-    [_eventDispatcher sendEvent:scrollEvent];
-}
-
-- (void)stopDeviceMotionUpdate
-{
-    [[DeviceMotionView sharedManager] stopDeviceMotionUpdates];
-    isRunning = NO;
+    RCTMotionEvent *event = [[RCTMotionEvent alloc] initWithEventName:eventName reactTag:viewTag motion:motion coalescingKey:_coalescingKey];
+    [_bridge.eventDispatcher sendEvent:event];
 }
 
 @end

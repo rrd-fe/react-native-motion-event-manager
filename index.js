@@ -1,3 +1,1 @@
-import AnimatedDeviceMotionView from './src/DeviceMotionView';
-
-export { AnimatedDeviceMotionView };
+export { DeviceMotionModule } from './src/DeviceMotionModule';
