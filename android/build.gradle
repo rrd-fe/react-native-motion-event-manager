@@ -1,0 +1,27 @@
+apply plugin: 'com.android.library'
+
+def safeExtGet(prop, fallback) {
+    rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+}
+
+def _reactNativeVersion = safeExtGet("reactNative", "+")
+
+android {
+    compileSdkVersion safeExtGet("compileSdkVersion", 28)
+
+    defaultConfig {
+        minSdkVersion safeExtGet("minSdkVersion", 14)
+        targetSdkVersion safeExtGet("targetSdkVersion", 28)
+        versionCode 1
+        versionName "1.0"
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.facebook.react:react-native:${_reactNativeVersion}"
+}
