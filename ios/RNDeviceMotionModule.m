@@ -10,7 +10,7 @@
 
 - (instancetype)initWithEventName:(NSString *)eventName
                          reactTag:(NSNumber *)reactTag
-                           motion:(CMDeviceMotion *)motion
+                             data:(CMDeviceMotion *)data
                     coalescingKey:(uint16_t)coalescingKey NS_DESIGNATED_INITIALIZER;
 
 @end
@@ -26,7 +26,7 @@
 
 - (instancetype)initWithEventName:(NSString *)eventName
                          reactTag:(NSNumber *)reactTag
-                           motion:(CMDeviceMotion *)motion
+                             data:(CMDeviceMotion *)data
                     coalescingKey:(uint16_t)coalescingKey
 {
     RCTAssertParam(reactTag);
@@ -34,7 +34,7 @@
     if ((self = [super init])) {
         _eventName = [eventName copy];
         _viewTag = reactTag;
-        _motion = motion;
+        _motion = data;
         _coalescingKey = coalescingKey;
     }
     return self;
@@ -140,7 +140,7 @@ RCT_EXPORT_METHOD(startDeviceMotionUpdates:(nonnull NSNumber *)viewTag eventName
         [RNDeviceMotionModule sharedManager].deviceMotionUpdateInterval = 1.0 / 60.0;
         [[RNDeviceMotionModule sharedManager] startDeviceMotionUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMDeviceMotion * _Nullable motion, NSError * _Nullable error) {
             if (motion) {
-                [self sendMotionEventWithName:eventName viewTag:viewTag motion:motion];
+                [self sendEventWithName:eventName viewTag:viewTag data:motion];
             }
         }];
     }
@@ -151,15 +151,15 @@ RCT_EXPORT_METHOD(stopDeviceMotionUpdates) {
     isRunning = NO;
 }
 
-- (void)sendMotionEventWithName:(NSString *)eventName
-                        viewTag:(NSNumber *)viewTag
-                         motion:(CMDeviceMotion *)motion
+- (void)sendEventWithName:(NSString *)eventName
+                  viewTag:(NSNumber *)viewTag
+                     data:(CMDeviceMotion *)data
 {
     if (![_lastEmittedEventName isEqualToString:eventName]) {
         _coalescingKey++;
         _lastEmittedEventName = [eventName copy];
     }
-    RCTMotionEvent *event = [[RCTMotionEvent alloc] initWithEventName:eventName reactTag:viewTag motion:motion coalescingKey:_coalescingKey];
+    RCTMotionEvent *event = [[RCTMotionEvent alloc] initWithEventName:eventName reactTag:viewTag data:data coalescingKey:_coalescingKey];
     [_bridge.eventDispatcher sendEvent:event];
 }
 
