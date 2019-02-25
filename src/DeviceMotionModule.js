@@ -5,11 +5,12 @@ import {
 } from 'react-native';
 
 const RNMotionModule = NativeModules.RNDeviceMotionModule;
-const ReactNativeTagHandles = require('react-native/Libraries/Renderer/src/renderers/native/ReactNativeTagHandles');
 
 var DeviceMotionModule = {
     startDeviceMotionUpdates: function(eventMapping) {
-        let tag = ReactNativeTagHandles.allocateTag();
+        // Since allocateTag() is not exposed to public, we set a big unique number to
+        // the tag param as a workaround
+        let tag = 100000;
         let eventName = 'onMotionChange';
         Animated.attachNativeEvent(tag, eventName, [{
             nativeEvent: eventMapping,

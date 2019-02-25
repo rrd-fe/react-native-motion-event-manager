@@ -5,11 +5,12 @@ import {
 } from 'react-native';
 
 const RNAccelerometerModule = NativeModules.RNAccelerometerModule;
-const ReactNativeTagHandles = require('react-native/Libraries/Renderer/src/renderers/native/ReactNativeTagHandles');
 
 var AccelerometerModule = {
     startAccelerometerUpdates: function(eventMapping) {
-        let tag = ReactNativeTagHandles.allocateTag();
+        // Since allocateTag() is not exposed to public, we set a big unique number to
+        // the tag param as a workaround
+        let tag = 100002;
         let eventName = 'onAccelerometerChange';
         Animated.attachNativeEvent(tag, eventName, [{
             nativeEvent: eventMapping,

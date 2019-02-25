@@ -5,11 +5,12 @@ import {
 } from 'react-native';
 
 const RNGyroscopeModule = NativeModules.RNGyroscopeModule;
-const ReactNativeTagHandles = require('react-native/Libraries/Renderer/src/renderers/native/ReactNativeTagHandles');
 
 var GyroscopeModule = {
     startGyroscopeUpdates: function(eventMapping) {
-        let tag = ReactNativeTagHandles.allocateTag();
+        // Since allocateTag() is not exposed to public, we set a big unique number to
+        // the tag param as a workaround
+        let tag = 100004;
         let eventName = 'onGyroscopeChange';
         Animated.attachNativeEvent(tag, eventName, [{
             nativeEvent: eventMapping,
