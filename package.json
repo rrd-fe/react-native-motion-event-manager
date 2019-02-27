@@ -1,6 +1,6 @@
 {
   "name": "react-native-motion-event-manager",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Extract Device Motion event to React Native, with Animated.event supported.",
   "main": "index.js",
   "scripts": {
