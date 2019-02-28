@@ -20,5 +20,6 @@
   ],
   "author": "Michael Bai",
   "license": "ISC",
-  "homepage": "https://github.com/rrd-fe/react-native-motion-event-manager"
+  "homepage": "https://github.com/rrd-fe/react-native-motion-event-manager",
+  "repository": "https://github.com/rrd-fe/react-native-motion-event-manager.git"
 }
