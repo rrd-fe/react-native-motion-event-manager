@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F0C638B229FDC1700D8D8C8 /* RNMagnetometerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C6384229FDC1700D8D8C8 /* RNMagnetometerModule.m */; };
+		3F0C638C229FDC1700D8D8C8 /* RNGyroscopeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C6387229FDC1700D8D8C8 /* RNGyroscopeModule.m */; };
+		3F0C638D229FDC1700D8D8C8 /* RNDeviceMotionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C6389229FDC1700D8D8C8 /* RNDeviceMotionModule.m */; };
+		3F0C638E229FDC1700D8D8C8 /* RNAccelerometerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C638A229FDC1700D8D8C8 /* RNAccelerometerModule.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3F0C6375229FD6A700D8D8C8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3F0C6377229FD6A700D8D8C8 /* libRNMotionEventManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNMotionEventManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F0C6383229FDC1700D8D8C8 /* RNDeviceMotionModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNDeviceMotionModule.h; sourceTree = SOURCE_ROOT; };
+		3F0C6384229FDC1700D8D8C8 /* RNMagnetometerModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNMagnetometerModule.m; sourceTree = SOURCE_ROOT; };
+		3F0C6385229FDC1700D8D8C8 /* RNAccelerometerModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNAccelerometerModule.h; sourceTree = SOURCE_ROOT; };
+		3F0C6386229FDC1700D8D8C8 /* RNMagnetometerModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNMagnetometerModule.h; sourceTree = SOURCE_ROOT; };
+		3F0C6387229FDC1700D8D8C8 /* RNGyroscopeModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNGyroscopeModule.m; sourceTree = SOURCE_ROOT; };
+		3F0C6388229FDC1700D8D8C8 /* RNGyroscopeModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNGyroscopeModule.h; sourceTree = SOURCE_ROOT; };
+		3F0C6389229FDC1700D8D8C8 /* RNDeviceMotionModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNDeviceMotionModule.m; sourceTree = SOURCE_ROOT; };
+		3F0C638A229FDC1700D8D8C8 /* RNAccelerometerModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNAccelerometerModule.m; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F0C6374229FD6A700D8D8C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F0C636E229FD6A700D8D8C8 = {
+			isa = PBXGroup;
+			children = (
+				3F0C6379229FD6A700D8D8C8 /* RNMotionEventManager */,
+				3F0C6378229FD6A700D8D8C8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3F0C6378229FD6A700D8D8C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F0C6377229FD6A700D8D8C8 /* libRNMotionEventManager.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F0C6379229FD6A700D8D8C8 /* RNMotionEventManager */ = {
+			isa = PBXGroup;
+			children = (
+				3F0C6385229FDC1700D8D8C8 /* RNAccelerometerModule.h */,
+				3F0C638A229FDC1700D8D8C8 /* RNAccelerometerModule.m */,
+				3F0C6383229FDC1700D8D8C8 /* RNDeviceMotionModule.h */,
+				3F0C6389229FDC1700D8D8C8 /* RNDeviceMotionModule.m */,
+				3F0C6388229FDC1700D8D8C8 /* RNGyroscopeModule.h */,
+				3F0C6387229FDC1700D8D8C8 /* RNGyroscopeModule.m */,
+				3F0C6386229FDC1700D8D8C8 /* RNMagnetometerModule.h */,
+				3F0C6384229FDC1700D8D8C8 /* RNMagnetometerModule.m */,
+			);
+			path = RNMotionEventManager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F0C6376229FD6A700D8D8C8 /* RNMotionEventManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F0C6380229FD6A700D8D8C8 /* Build configuration list for PBXNativeTarget "RNMotionEventManager" */;
+			buildPhases = (
+				3F0C6373229FD6A700D8D8C8 /* Sources */,
+				3F0C6374229FD6A700D8D8C8 /* Frameworks */,
+				3F0C6375229FD6A700D8D8C8 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RNMotionEventManager;
+			productName = RNMotionEventManager;
+			productReference = 3F0C6377229FD6A700D8D8C8 /* libRNMotionEventManager.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F0C636F229FD6A700D8D8C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = RRD;
+				TargetAttributes = {
+					3F0C6376229FD6A700D8D8C8 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = 3F0C6372229FD6A700D8D8C8 /* Build configuration list for PBXProject "RNMotionEventManager" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3F0C636E229FD6A700D8D8C8;
+			productRefGroup = 3F0C6378229FD6A700D8D8C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F0C6376229FD6A700D8D8C8 /* RNMotionEventManager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F0C6373229FD6A700D8D8C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F0C638D229FDC1700D8D8C8 /* RNDeviceMotionModule.m in Sources */,
+				3F0C638B229FDC1700D8D8C8 /* RNMagnetometerModule.m in Sources */,
+				3F0C638C229FDC1700D8D8C8 /* RNGyroscopeModule.m in Sources */,
+				3F0C638E229FDC1700D8D8C8 /* RNAccelerometerModule.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3F0C637E229FD6A700D8D8C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3F0C637F229FD6A700D8D8C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F0C6381229FD6A700D8D8C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8SA7A296UH;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3F0C6382229FD6A700D8D8C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8SA7A296UH;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F0C6372229FD6A700D8D8C8 /* Build configuration list for PBXProject "RNMotionEventManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F0C637E229FD6A700D8D8C8 /* Debug */,
+				3F0C637F229FD6A700D8D8C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F0C6380229FD6A700D8D8C8 /* Build configuration list for PBXNativeTarget "RNMotionEventManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F0C6381229FD6A700D8D8C8 /* Debug */,
+				3F0C6382229FD6A700D8D8C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F0C636F229FD6A700D8D8C8 /* Project object */;
+}
