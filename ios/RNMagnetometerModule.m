@@ -2,9 +2,9 @@
 #import "RNMagnetometerModule.h"
 #import <CoreMotion/CoreMotion.h>
 
-#import "RCTEventDispatcher.h"
-#import "RCTLog.h"
-#import "UIView+React.h"
+#import <React/RCTEventDispatcher.h>
+#import <React/RCTLog.h>
+#import <React/UIView+React.h>
 
 @interface RCTMagnetometerEvent : NSObject <RCTEvent>
 
