@@ -7,13 +7,26 @@ It uses Animated API and native driver to update UI in native UI thread. With by
 npm i react-native-motion-event-manager
 ```
 
-### Cocoapods (iOS only)
+### iOS
+
+#### Cocoapods
 
 Add the following to your Podfile
 ```
 pod 'RNMotionEventManager', :path => '/your/path/to/react-native-motion-event-manager'
 ```
 and then run `pod install`
+
+#### Manual
+
+1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
+2. Go to `node_modules` ➜ `react-native-motion-event-manager` ➜ `ios`and add `RNMotionEventManager.xcodeproj`
+3. In XCode, in the project navigator, select your project. Add `libRNMotionEventManager.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
+4. Run your project on device.
+
+### Android
+
+To be continued.
 
 ## Usage
 

@@ -9,7 +9,9 @@ react-native-motion-event-manager将device motion导出到RN，它使用了Anima
 npm i react-native-motion-event-manager
 ```
 
-### Cocoapods (iOS only)
+### iOS
+
+#### Cocoapods安装
 
 然后在iOS的工程目录的Podfile中添加如下代码：
 
@@ -17,6 +19,17 @@ npm i react-native-motion-event-manager
 pod 'RNMotionEventManager', :path => '/your/path/to/react-native-motion-event-manager'
 ```
 之后运行`pod install`
+
+#### 手动安装
+
+1. 在XCode的project navigator中，右键 `Libraries`，之后点击 `Add Files to [your project's name]`
+2. 依次进入目录 `node_modules` ➜ `react-native-motion-event-manager` ➜ `ios`，然后添加 `RNMotionEventManager.xcodeproj`
+3. 在XCode中选择你的target的`Build Phases`，在`Link Binary With Libraries`中添加 `libRNMotionEventManager.a`。
+4. 在真机上运行工程。
+
+### Android
+
+未完待续。
 
 ## 使用
 
