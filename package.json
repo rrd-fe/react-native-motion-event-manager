@@ -1,7 +1,7 @@
 {
   "name": "react-native-motion-event-manager",
-  "version": "0.0.2",
-  "description": "Extract Device Motion event to React Native, with Animated.event supported.",
+  "version": "0.0.3",
+  "description": "Extract device motion event to React Native, use native driver to provide high performance.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,7 +16,8 @@
     "Magnetometer",
     "yaw",
     "pitch",
-    "roll"
+    "roll",
+    "native driver"
   ],
   "author": "Michael Bai",
   "license": "MIT",
