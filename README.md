@@ -29,7 +29,34 @@ pod 'RNMotionEventManager', :path => '/your/path/to/react-native-motion-event-ma
 
 ### Android
 
-未完待续。
+#### 使用react-native link
+
+```
+react-native link react-native-motion-event-manager
+```
+#### 手动添加
+1. 引入 react-native-motion-event-manager
+
+```
+include ':react-native-motion-event-manager'
+project(':react-native-motion-event-manager').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-motion-event-manager/android')
+```
+2. 添加依赖
+
+```
+implementation project(':react-native-motion-event-manager')
+```
+3. 初始化 MotionEventPackage
+
+```
+@Override
+protected List<ReactPackage> getPackages() {
+  return Arrays.<ReactPackage>asList(
+    new MainReactPackage(),
+    new MotionEventPackage()
+  );
+}
+```
 
 ## 使用
 

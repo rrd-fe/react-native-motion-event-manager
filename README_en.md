@@ -26,7 +26,34 @@ and then run `pod install`
 
 ### Android
 
-To be continued.
+#### react-native link
+
+```
+react-native link react-native-motion-event-manager
+```
+#### Manual
+1. include react-native-motion-event-manager
+
+```
+include ':react-native-motion-event-manager'
+project(':react-native-motion-event-manager').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-motion-event-manager/android')
+```
+2. add native dependencies
+
+```
+implementation project(':react-native-motion-event-manager')
+```
+3. init MotionEventPackage
+
+```
+@Override
+protected List<ReactPackage> getPackages() {
+  return Arrays.<ReactPackage>asList(
+    new MainReactPackage(),
+    new MotionEventPackage()
+  );
+}
+```
 
 ## Usage
 
