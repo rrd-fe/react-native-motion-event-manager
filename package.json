@@ -1,6 +1,6 @@
 {
   "name": "react-native-motion-event-manager",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Extract device motion event to React Native, use native driver to provide high performance.",
   "main": "index.js",
   "scripts": {
