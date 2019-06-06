@@ -63,8 +63,8 @@ Below is a sample using DeviceMotionModule:
 import { DeviceMotionModule } from 'react-native-motion-event-manager';
 
 class YourClass extends Component {
-	componentDidMount() {
-	    // replace with your mapping here
+    componentDidMount() {
+        // replace with your mapping here
         let eventMapping = {
             attitude: {
                 roll: this.state.roll, 
@@ -86,9 +86,11 @@ Here `this.state.roll` is an Animated.Value, and every update of native motion e
       inputRange: [-1.5, 1.5],
       outputRange: [0, 1]
     })}}>
-  Some text here.
+  Opacity will change while rolling.
 </Animated.Text>
 ```
+
+More API can be found [here](./API.md).
 
 ## Caveats
 
